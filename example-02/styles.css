@@ -1,0 +1,61 @@
+@keyframes rotate {
+    to { transform: rotate(360deg); }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  
+  background: radial-gradient(white, yellow); /* Standard syntax */
+  background-size: 500%;
+  background-position: center center;
+  
+  transition: background 300ms;
+}
+
+#button {
+  display: block;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
+  background: #ffffff;
+  color: #000000;
+  padding: 1em;
+  text-align: center;
+  width: 100px;
+  margin: 2em auto;
+  cursor: pointer;
+}
+
+#button:hover {
+  background: yellow;
+}
+
+
+#image {
+  display: block;
+  width: 50vmin;
+  height: 50vmin;
+  margin: 15vmin auto;
+/*  transform: translate(-50%, -50%);*/
+  
+  transition: border-radius 300ms;
+  
+  animation-name: rotate;
+  animation-duration: 4s;
+  animation-delay: 300ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+
+}
+
+body.go {
+  background-size: 100%;
+
+}
+
+body.go #image {
+  border-radius: 50vmin;
+  animation-play-state: running;
+}

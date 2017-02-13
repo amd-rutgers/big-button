@@ -1,0 +1,66 @@
+@keyframes rotate {
+    to { transform: rotateY(360deg) rotateX(360deg) rotateX(920deg); }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(50, 50, 50);
+}
+
+#button {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
+  font-size: 4vmin;
+  line-height: 10vmin;
+  text-align: center;
+  display: block;
+  border: none;
+  background: rgb(255, 0, 0);
+  width: 10vmin;
+  height: 10vmin;
+  margin: 2vh auto;
+  border-radius: 10vmin;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+#button:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(255, 0, 0);
+}
+
+
+#image {
+  display: block;
+  background: transparent;
+  border: 0px solid transparent;
+  height: 60vh;
+  width: 60vh;
+  margin: 6vh auto 0;
+  
+  transition: height 500ms, border-width 500ms, border-color 500ms;
+  
+  animation: rotate;
+  animation-delay: 200ms;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+  animation-direction: normal;
+}
+
+#image.go {
+  height: 0px;
+  border-width: 0;
+  border-top-width: 30vmin;
+  border-bottom-width: 30vmin;
+  border-top-color: #5a91c7;
+  border-bottom-color: #4f6d23;
+ 
+  transition: height 500ms, border-width 500ms, border-color 500ms;
+
+
+  animation-play-state: running;
+
+}
